@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "756472204453",
+    "firebase_url": "https://movilymad.firebaseio.com",
+    "project_id": "movilymad",
+    "storage_bucket": "movilymad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756472204453:android:26a19b81eec1e606",
+        "android_client_info": {
+          "package_name": "com.example.movilymad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756472204453-1jspuueh5vpt7c58gejcplta2hbtgguh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movilymad",
+            "certificate_hash": "15081df45df5d9405bf8617ea417751696f7e29a"
+          }
+        },
+        {
+          "client_id": "756472204453-1deb2joo5jpsels9bs6h89osvt68l3c1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBom_v4d1jikFZP3tDFqQx8Bj-W7C4RM5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756472204453-1deb2joo5jpsels9bs6h89osvt68l3c1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
