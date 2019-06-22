@@ -10,7 +10,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.Toast;
 
 import com.directions.route.AbstractRouting;
@@ -52,7 +51,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int[] COLORS = new int[]{R.color.colorPrimary};
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +61,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -89,11 +86,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             });
             setMarkers();
-            for(MarkerOptions marker : zityMarkers)
+            for (MarkerOptions marker : zityMarkers)
                 mMap.addMarker(marker);
-            for(MarkerOptions marker : biciMadMarkers)
+            for (MarkerOptions marker : biciMadMarkers)
                 mMap.addMarker(marker);
-            for(MarkerOptions marker : eMovMarkers)
+            for (MarkerOptions marker : eMovMarkers)
                 mMap.addMarker(marker);
 
         }
@@ -148,7 +145,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void setMarkers(){
+    private void setMarkers() {
         zityMarkers = new ArrayList<>();
         biciMadMarkers = new ArrayList<>();
         eMovMarkers = new ArrayList<>();
@@ -158,37 +155,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .title("Zity 1").snippet("Matricula: 1234AAA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         MarkerOptions zity_2 = new MarkerOptions()
                 .position(new LatLng(40.467429736651184, -3.697012268222238))
-                .title("Zity 2").snippet("Matricula: 2222BBB" + "\n" + "Bateria: 77%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                .title("Zity 2").snippet("Matricula: 2222BBB").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         MarkerOptions zity_3 = new MarkerOptions()
                 .position(new LatLng(40.46279342968996, -3.6999948846467987))
-                .title("Zity 3").snippet("Matricula: 4567CCC" + "\n" + "Bateria: 25%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                .title("Zity 3").snippet("Matricula: 4567CCC").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
         zityMarkers.add(zity_1);
         zityMarkers.add(zity_2);
         zityMarkers.add(zity_3);
 
         MarkerOptions bici_1 = new MarkerOptions()
                 .position(new LatLng(40.464295366988466, -3.6900599824556366))
-                .title("BiciMad 1").snippet("Matricula: 7891DDD" + "\n" + "Bateria: 98%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                .title("BiciMad 1").snippet("Matricula: 7891DDD").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         MarkerOptions bici_2 = new MarkerOptions()
                 .position(new LatLng(40.45756903840472, -3.68297895065632))
-                .title("BiciMad 2").snippet("Matricula: 3216EEE" + "\n" + "Bateria: 65%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                .title("BiciMad 2").snippet("Matricula: 3216EEE").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
         MarkerOptions bici_3 = new MarkerOptions()
-                .position(new LatLng(40.46103024305326,-3.695746265567209))
-                .title("BiciMad 3").snippet("Matricula: 7895FFF" + "\n" + "Bateria: 42%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                .position(new LatLng(40.46103024305326, -3.695746265567209))
+                .title("BiciMad 3").snippet("Matricula: 7895FFF").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
 
         biciMadMarkers.add(bici_1);
         biciMadMarkers.add(bici_2);
         biciMadMarkers.add(bici_3);
 
         MarkerOptions emov_1 = new MarkerOptions()
-                .position(new LatLng(40.463111259517575,-3.698122501373291))
-                .title("Emov 1").snippet("Matricula: 1234AAA" + "\n" + "Bateria: 12%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+                .position(new LatLng(40.463111259517575, -3.698122501373291))
+                .title("Emov 1").snippet("Matricula: 6724CCD").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
         MarkerOptions emov_2 = new MarkerOptions()
-                .position(new LatLng(40.46951055485471,-3.690762519836426))
-                .title("Emov 2").snippet("Matricula: 1234AAA" + "\n" + "Bateria: 62%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+                .position(new LatLng(40.46951055485471, -3.690762519836426))
+                .title("Emov 2").snippet("Matricula: HU4187P").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
         MarkerOptions emov_3 = new MarkerOptions()
-                .position(new LatLng(40.46569064068097,-3.680140972137451))
-                .title("Emov 3").snippet("Matricula: 1234AAA" + "\n" + "Bateria: 73%").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
+                .position(new LatLng(40.46569064068097, -3.680140972137451))
+                .title("Emov 3").snippet("Matricula: 9865BCA").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_VIOLET));
 
         eMovMarkers.add(emov_1);
         eMovMarkers.add(emov_2);
@@ -197,10 +194,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onRoutingFailure(RouteException e) {
-        if(e != null) {
+        if (e != null) {
             Toast.makeText(this, "Error: " + e.getMessage(), Toast.LENGTH_LONG).show();
             Log.d("TAG", "Error: " + e.getMessage());
-        }else {
+        } else {
             Toast.makeText(this, "Something went wrong, Try again", Toast.LENGTH_SHORT).show();
         }
     }
@@ -212,7 +209,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onRoutingSuccess(ArrayList<Route> route, int shortestRouteIndex) {
-        if(polylines.size()>0) {
+        if (polylines.size() > 0) {
             for (Polyline poly : polylines) {
                 poly.remove();
             }
@@ -220,7 +217,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         polylines = new ArrayList<>();
         //add route(s) to the map.
-        for (int i = 0; i <route.size(); i++) {
+        for (int i = 0; i < route.size(); i++) {
 
             //In case of more than 5 alternative routes
             int colorIndex = i % COLORS.length;
@@ -232,7 +229,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Polyline polyline = mMap.addPolyline(polyOptions);
             polylines.add(polyline);
 
-            Toast.makeText(getApplicationContext(),"Route "+ (i+1) +": distance - "+ route.get(i).getDistanceValue()+": duration - "+ route.get(i).getDurationValue(),Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Distancia: " + route.get(i).getDistanceText() + ": Tiempo: " + route.get(i).getDurationText(), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -241,7 +238,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void erasePolylines(){
+    private void erasePolylines() {
         for (Polyline line : polylines)
             line.remove();
 
